@@ -1,4 +1,4 @@
-class Repository
+class Repository < ActiveRecord::Base
   def initialize(content)
     @content = content
   end

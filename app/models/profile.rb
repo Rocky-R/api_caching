@@ -1,4 +1,4 @@
-class Profile
+class Profile < ActiveRecord::Base
 
   def initialize(username)
     @content = HTTParty.get(
