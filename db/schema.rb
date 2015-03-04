@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150304191239) do
 
   create_table "profiles", force: :cascade do |t|
-    t.binary   "body"
+    t.text     "body"
     t.string   "username"
     t.string   "avatar_url"
     t.string   "location"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150304191239) do
   end
 
   create_table "repositories", force: :cascade do |t|
-    t.binary   "body"
+    t.text     "body"
     t.string   "name"
     t.string   "url"
     t.integer  "fork_number"

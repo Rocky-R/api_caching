@@ -1,7 +1,7 @@
 class CreateRepositories < ActiveRecord::Migration
   def change
     create_table :repositories do |t|
-      t.binary :body
+      t.text :body
       t.string :name
       t.string :url
       t.integer :fork_number
