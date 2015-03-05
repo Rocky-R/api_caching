@@ -2,10 +2,6 @@ class Profile < ActiveRecord::Base
   has_many :repositories
   validates :username, uniqueness: true
 
-  # def initialize(username)
-  #   @username = username
-  # end
-
   def self.create_from_username(username)
     profile = nil
     response = HTTParty.get(

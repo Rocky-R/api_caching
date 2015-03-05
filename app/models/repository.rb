@@ -3,7 +3,7 @@ class Repository < ActiveRecord::Base
   validates :url, uniqueness: true
 
   def self.create_from_username(username)
-    @profile = Profile.find_by_username('username')
+    @profile = Profile.find_by_username(username)
     response = HTTParty.get(
         "https://api.github.com/users/#{username}/repos?sort=updated",
         :headers => {"Authorization" => "token #{ENV['GITHUB_TOKEN']}",
