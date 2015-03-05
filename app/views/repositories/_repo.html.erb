@@ -5,11 +5,11 @@
     </a>
     <a>
       <i class="fa fa-star-o"></i>
-      <%= repo.number_of_stars %>
+      <%= repo.star_number %>
     </a>
     <a>
       <i class="fa fa-code-fork"></i>
-      <%= repo.number_of_forks %>
+      <%= repo.fork_number %>
     </a>
   </div>
 
@@ -18,7 +18,7 @@
   </h3>
 
   <p>
-    Updated <%= distance_of_time_in_words_to_now(repo.updated_at) %> ago
+    Updated <%= distance_of_time_in_words_to_now(repo.date_updated) %> ago
   </p>
 
 </div>

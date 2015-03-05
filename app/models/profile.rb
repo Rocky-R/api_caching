@@ -1,4 +1,5 @@
 class Profile < ActiveRecord::Base
+  has_many :repositories
   validates :username, uniqueness: true
 
   # def initialize(username)
@@ -27,29 +28,4 @@ class Profile < ActiveRecord::Base
     end
     profile
   end
-
-  # def username
-  #   @content["login"]
-  # end
-
-  # def avatar_url
-  #   @content["avatar_url"]
-  # end
-  #
-  # def location
-  #   @content["location"]
-  # end
-  #
-  # def company_name
-  #   @content["company"]
-  # end
-  #
-  # def number_of_followers
-  #   @content["followers"]
-  # end
-  #
-  # def number_following
-  #   @content["following"]
-  # end
-
 end
