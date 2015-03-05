@@ -6,8 +6,8 @@ class RepositoriesController < ApplicationController
   def show
     @profile = Profile.find_by_username(params[:username]) ||
         Profile.create_from_username(params[:username])
-    @repositories = Repository.find_by_profile_id(@profile.id).all
-    if @repositories.nil?
+    @repositories = Repository.where(profile_id: @profile.id).all
+    if @repositories.empty?
       Repository.create_from_username(params[:username])
     end
   end
